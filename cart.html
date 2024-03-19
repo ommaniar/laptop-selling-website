@@ -57,79 +57,81 @@
         </nav>
     </header>
     <!-- cart-items -->
-    <section id="cart-items" class="my-3">
-        <div class="table-responsive "><table class="table table-striped caption-top">
-            <tr>
-                <caption class="text-center py-1">
-                    <h3>Your Cart</h3>
-                </caption>
-            </tr>
-            <tr>
-                <th>Item</th>
-                <th>Price</th>
-                <th>Quantity</th>
-                <th>Total</th>
-                <th></th>
-            </tr>
-            <tbody>
-                <tr id="row-1">
-                    <td>
-                        <div class="card mb-3" style="max-width: 540px;">
-                            <div class="row g-0">
-                                <div class="col-sm-4">
-                                    <img src="res/laptop-3.png" class="img-fluid rounded-start" alt="...">
-                                </div>
-                                <div class="col-sm-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Dual Screen Creative Laptop</h5>
-                                        <p class="card-text"><del>&#8377;140000</del> &#8377;125000</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </td>
-                    <td>&#8377;125000</td>
-                    <td>
-                        1
-                    </td>
-                    <td>&#8377;125000</td>
-                    <td><button class="btn btn-danger" onclick="removeRow('row-1')">Remove Item</button></td>
+    <section id="cart-items" class="my-3 container-fluid">
+        <div class="table-responsive">
+            <table class="table table-striped caption-top">
+                <tr>
+                    <caption class="text-center py-1">
+                        <h3>Your Cart</h3>
+                    </caption>
                 </tr>
-                <tr id="row-2">
-                    <td>
-                        <div class="card mb-3" style="max-width: 540px;">
-                            <div class="row g-0">
-                                <div class="col-sm-4">
-                                    <img src="res/laptop-3.png" class="img-fluid rounded-start" alt="...">
-                                </div>
-                                <div class="col-sm-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Dual Screen Creative Laptop</h5>
-                                        <p class="card-text"><del>&#8377;140000</del> &#8377;125000</p>
+                <tr>
+                    <th>Item</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th></th>
+                </tr>
+                <tbody>
+                    <tr id="row-1">
+                        <td>
+                            <div class="card mb-3" style="max-width: 540px;">
+                                <div class="row g-0">
+                                    <div class="col-sm-4">
+                                        <img src="res/laptop-3.png" class="img-fluid rounded-start" alt="...">
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Dual Screen Creative Laptop</h5>
+                                            <p class="card-text"><del>&#8377;140000</del> &#8377;125000</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </td>
-                    <td>&#8377;125000</td>
-                    <td>
-                        1
-                    </td>
-                    <td>&#8377;125000</td>
-                    <td><button class="btn btn-danger" onclick="removeRow('row-2')">Remove Item</button></td>
+                        </td>
+                        <td>&#8377;125000</td>
+                        <td>
+                            1
+                        </td>
+                        <td>&#8377;125000</td>
+                        <td><button class="btn btn-danger" onclick="removeRow('row-1')">Remove Item</button></td>
+                    </tr>
+                    <tr id="row-2">
+                        <td>
+                            <div class="card mb-3" style="max-width: 540px;">
+                                <div class="row g-0">
+                                    <div class="col-sm-4">
+                                        <img src="res/laptop-3.png" class="img-fluid rounded-start" alt="...">
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Dual Screen Creative Laptop</h5>
+                                            <p class="card-text"><del>&#8377;140000</del> &#8377;125000</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>&#8377;125000</td>
+                        <td>
+                            1
+                        </td>
+                        <td>&#8377;125000</td>
+                        <td><button class="btn btn-danger" onclick="removeRow('row-2')">Remove Item</button></td>
 
+                    </tr>
+                </tbody>
+                <tr>
+                    <td colspan="5" class="text-end pe-4">
+                        <button class="btn btn-secondary">Add Item</button>
+                    </td>
                 </tr>
-            </tbody>
-            <tr>
-                <td colspan="5" class="text-end pe-4">
-                    <button class="btn btn-secondary">Add Item</button>
-                </td>
-            </tr>
-        </table></div>
-        
+            </table>
+        </div>
+
         <!-- Final Bill -->
         <div class="row justify-content-end">
-            <div class="col-md-4">
+            <div class="col-md-4 table-responsive">
                 <table class="table">
                     <tr>
                         <th>Total:</th>
@@ -168,7 +170,11 @@
             </div>
         </div>
     </section>
-
+    <!-- footer -->
+    <footer class="bg-dark text-white text-center py-2 mt-5">
+        <h6>&copy; 2024 Laptop Shop</h6>
+        <p>This website is made for project purpose</p>
+    </footer>
     <script>
         function removeRow(id) {
             row = document.getElementById(id)
