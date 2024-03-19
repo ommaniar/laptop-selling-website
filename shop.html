@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop-Laptop Selling Website</title>
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- css -->
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Bootstrap5 -->
+    <!-- Bootstrap 5 script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!-- icon-link-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+            <div class="container-fluid ">
+                <div class="navbar-brand"><a href="index.html" class="navbar-brand"><img src="res/logo-laptop.png"
+                            class="navbar-brand-img"></a></div>
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#link1">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="link1">
+                    <div class="d-flex" role="search">
+                        <input class="form-control me-2" id="searchInput" type="search" placeholder="Search"
+                            aria-label="Search" onkeypress="triggerSearch()">
+                        <button class="btn btn-outline-light" onclick="search()">Search</button>
+                    </div>
+
+                    <ul class="navbar-nav">
+
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contact-us.html" class="nav-link">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#Shop" class="nav-link disabled active">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="cart.html" class="nav-link"><i class="bi bi-cart">Cart</i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Main Content -->
+    <section id="main">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="accordion" id="accordian-filter">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#budget-accordian" aria-expanded="true" aria-controls="collapseOne">
+                                Budget
+                            </button>
+                        </h2>
+                        <div id="budget-accordian" class="accordion-collapse collapse show"
+                            data-bs-parent="#accordian-filter">
+                            <div class="accordion-body">
+                                <form>
+                                    <div class="form-check">
+                                        <input type="checkbox" name="budget" id="budget" value="lt-40000"
+                                            class="form-check-input"> <label for="budget" class="form-check-label">Under
+                                            &#8377;40,000</label>
+                                    </div>
+                                    <div class="form-check"><input type="checkbox" name="budget" id="budget"
+                                            value="gt-40000-lt-70000" class="form-check-input"> <label for="budget"
+                                            class="form-check-label"> &#8377;40,001 -
+                                            &#8377;70,000</label></div>
+                                    <div class="form-check"><input type="checkbox" name="budget" id="budget"
+                                            value="gt-70000-lt-100000" class="form-check-input"> <label for="budget"
+                                            class="form-check-label"> &#8377;70,001 -
+                                            &#8377;1,00,000</label></div>
+                                    <div class="form-check"><input type="checkbox" name="budget" id="budget"
+                                            value="gt-100000" class="form-check-input"> <label for="budget"
+                                            class="form-check-label">Above &#8377;1,00,000</label></div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#processor-accordian" aria-expanded="false" aria-controls="collapseTwo">
+                                Processor
+                            </button>
+                        </h2>
+                        <div id="processor-accordian" class="accordion-collapse collapse"
+                            data-bs-parent="#accordian-filter">
+                            <div class="accordion-body">
+                                <form>
+                                    <div class="form-check">
+                                        <input type="checkbox" name="processor" id="processor" value="i3"
+                                            class="form-check-input"> <label for="processor"
+                                            class="form-check-label">Intel Core I3</label>
+                                    </div>
+                                    <div class="form-check"><input type="checkbox" name="processor" id="processor"
+                                            value="i5" class="form-check-input"> <label for="processor"
+                                            class="form-check-label">Intel Core I5</label></div>
+                                    <div class="form-check"><input type="checkbox" name="processor" id="processor"
+                                            value="i7" class="form-check-input"> <label for="processor"
+                                            class="form-check-label">Intel Core I7</label></div>
+                                    <div class="form-check"><input type="checkbox" name="processor" id="processor"
+                                            value="i9" class="form-check-input"> <label for="processor"
+                                            class="form-check-label">Intel Core I9</label></div>
+                                    <div class="form-check"><input type="checkbox" name="processor" id="processor"
+                                            value="r3" class="form-check-input"> <label for="processor"
+                                            class="form-check-label">AMD Ryzen 3</label></div>
+                                    <div class="form-check"><input type="checkbox" name="processor" id="processor"
+                                            value="r5" class="form-check-input"> <label for="processor"
+                                            class="form-check-label">AMD Ryzen 5</label></div>
+                                    <div class="form-check"><input type="checkbox" name="processor" id="processor"
+                                            value="r7" class="form-check-input"> <label for="processor"
+                                            class="form-check-label">AMD Ryzen 7</label></div>
+                                    <div class="form-check"><input type="checkbox" name="processor" id="processor"
+                                            value="r9" class="form-check-input"> <label for="processor"
+                                            class="form-check-label">AMD Ryzen 9</label></div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#category-accordian" aria-expanded="false"
+                                aria-controls="collapseThree">
+                                Category
+                            </button>
+                        </h2>
+                        <div id="category-accordian" class="accordion-collapse collapse"
+                            data-bs-parent="#accordian-filter">
+                            <div class="accordion-body">
+                                <form>
+                                    <div class="form-check">
+                                        <input type="checkbox" name="category" id="category" value="Everyday-laptop"
+                                            class="form-check-input"> <label for="category"
+                                            class="form-check-label">Everyday Laptop</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" name="category" id="category" value="Gaming-laptop"
+                                            class="form-check-input"> <label for="category"
+                                            class="form-check-label">Gaming Laptop</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" name="category" id="category"
+                                            value="Thin-and-light-laptop" class="form-check-input"> <label
+                                            for="category" class="form-check-label">Thin and Light Laptop</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" name="category" id="category" value="Multitasking-laptop"
+                                            class="form-check-input"> <label for="category"
+                                            class="form-check-label">Multitasking Laptop</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" name="category" id="category" value="Developer-laptop"
+                                            class="form-check-input"> <label for="category"
+                                            class="form-check-label">Developer Laptop</label>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="container" id="container3">
+                    <div class="row">
+                        <p id="searchText" class="col-12 mt-3"></p>
+
+                        <!-- row-1 -->
+                        <div class="col-md-3 col-sm-6 my-2 card-wrapper" data-search-keyword="Thin and Light Laptop">
+                            <div class="card h-100">
+                                <img src="res/laptop-1.png" class="card-img-top" alt="thin-and-light-laptop-image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Thin And Light Laptop</h5>
+                                    <p class="card-text"><del>&#8377;50000</del> &#8377;46700</p>
+                                    <button class="btn btn-primary w-100"
+                                        onclick="showDetails('thin-and-light-laptop')">Show Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 my-2 card-wrapper" data-search-keyword="Gaming Laptop">
+                            <div class="card h-100">
+                                <img src="res/laptop-5.png" class="card-img-top" alt="thin-and-light-laptop-image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Gaming Laptop</h5>
+                                    <p class="card-text"><del>&#8377;60000</del> &#8377;56000</p>
+                                    <button class="btn btn-primary w-100" onclick="showDetails('gaming-laptop')">Show Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 my-2 card-wrapper"
+                            data-search-keyword="Dual Screen Creative Laptop">
+                            <div class="card h-100">
+                                <img src="res/laptop-3.png" class="card-img-top" alt="thin-and-light-laptop-image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Dual Screen Creative Laptop</h5>
+                                    <p class="card-text"><del>&#8377;150000</del> &#8377;149000</p>
+                                    <button class="btn btn-primary w-100" onclick="showDetails('dual-screen-laptop')">Show Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 my-2 card-wrapper" data-search-keyword="RGB Gaming Laptop">
+                            <div class="card h-100">
+                                <img src="res/laptop-6.png" class="card-img-top" alt="thin-and-light-laptop-image">
+                                <div class="card-body">
+                                    <h5 class="card-title">RGB Gaming Laptop</h5>
+                                    <p class="card-text"><del>&#8377;140000</del> &#8377;125000</p>
+                                    <button class="btn btn-primary w-100" onclick="showDetails('RGB-gaming-laptop')">Show Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 my-2 card-wrapper" data-search-keyword="Gaming Laptop 2">
+                            <div class="card h-100">
+                                <img src="res/laptop-7.png" class="card-img-top" alt="thin-and-light-laptop-image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Gaming Laptop 2</h5>
+                                    <p class="card-text"><del>&#8377;70000</del> &#8377;69000</p>
+                                    <button class="btn btn-primary w-100" onclick="showDetails('gaming-laptop-2')">Show Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 my-2 card-wrapper" data-search-keyword="Everyday Laptop">
+                            <div class="card h-100">
+                                <img src="res/laptop-8.png" class="card-img-top" alt="thin-and-light-laptop-image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Everyday Laptop</h5>
+                                    <p class="card-text"><del>&#8377;30000</del> &#8377;28000</p>
+                                    <button class="btn btn-primary w-100" onclick="showDetails('everyday-laptop')">Show Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 my-2 card-wrapper" data-search-keyword="Premium Laptop">
+                            <div class="card h-100">
+                                <img src="res/laptop-9.png" class="card-img-top" alt="thin-and-light-laptop-image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Premium Laptop</h5>
+                                    <p class="card-text"><del>&#8377;80000</del> &#8377;70000</p>
+                                    <button class="btn btn-primary w-100" onclick="showDetails('premium-laptop')">Show Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 my-2 card-wrapper"
+                            data-search-keyword="RGB Gaming Laptop High Spec">
+                            <div class="card h-100">
+                                <img src="res/laptop-10.png" class="card-img-top" alt="thin-and-light-laptop-image">
+                                <div class="card-body">
+                                    <h5 class="card-title">RGB Gaming Laptop High Spec</h5>
+                                    <p class="card-text"><del>&#8377;300000</del> &#8377;286000</p>
+                                    <button class="btn btn-primary w-100" onclick="showDetails('RGB-gaming-laptop-high-spec')">Show Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer class="bg-dark text-white text-center py-2 mt-5">
+        <h6>&copy; 2024 Laptop Shop</h6>
+        <p>This website is made for project purpose</p>
+    </footer>
+
+    <!-- script tags -->
+    <script type="text/javascript" lang="js">
+        // function search() {
+        //     // Declare variables
+        //     var input = document.getElementById("searchInput").value;
+        //     var content = document.getElementsByClassName('card-title');
+        //     var card = document.getElementsByClassName('card');
+        //     console.log(content.length)
+        //     // Loop through all list items, and hide those who don't match the search query
+        //     for (i = 0; i < content.length; i++) {
+        //         txtValue = content[i].textContent || content[i].innerText;
+        //         if (txtValue.toLowerCase().indexOf(input) > -1) {
+        //             // card[i].classList.remove("d-none");
+        //             card[i].style.visibility = "visible";
+        //             console.log("True")
+        //         } else {
+        //             // card[i].classList.add("d-none");
+        //             card[i].style.visibility = "hidden";
+        //         }
+        //     }
+        // }
+        // Function to handle search
+        function search() {
+            var searchInput = document.getElementById('searchInput');
+            var cards = document.querySelectorAll('.card-wrapper');
+            console.log(cards.length)
+            var searchQuery = searchInput.value.toLowerCase();
+            var searchText = document.getElementById("searchText")
+            searchText.innerHTML = `Search Result for ${searchQuery}`
+            cards.forEach(function (card) {
+                var keywords = card.getAttribute('data-search-keyword').toLowerCase();
+                if (keywords.includes(searchQuery)) {
+                    // card.style.display = 'flex !important';
+                    card.classList.remove('d-none'); // Hide the card
+                    console.log("True")
+                } else {
+                    // card.style.display = 'none !important';
+                    card.classList.add('d-none'); // Show the card
+                }
+            });
+        }
+        // function for redirecting details
+        function showDetails(productID){
+            window.location.href = `product.html?id=${productID}`
+        }
+        function triggerSearch(){
+            if (event.key === "Enter"){
+                search()
+            }
+        }
+    </script>
+</body>
+
+</html>

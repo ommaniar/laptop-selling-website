@@ -1,0 +1,81 @@
+*{
+    font-family: "Nunito" !important;
+}
+option{
+  font-family: "Nunito" !important;
+
+}
+.navbar-brand-img{
+  height: 50px;
+}
+
+/* Shop st */
+#Shop{
+  width: 100%;
+}
+.heading4{
+  color:black;
+  border-bottom: 2px solid #b2744c;
+
+}
+
+/* transition in card */
+.card{
+  transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+
+}
+/* hover effect for card */
+.card:hover{
+  transform: scale(1.05);
+box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+/* adding background */
+.bg-contact{
+  background-image: url(res/laptop-3-carousel.png);
+}
+.opacity-50{
+  background-color: rgba(108, 117, 125,0.5) !important;
+}
+/* #container3{
+  margin-top: 25px;
+}
+#Shop h3{
+  text-align: center;
+  color: black;
+  font-size: 25px;
+}
+#Shop p{
+  padding-top: 20px;
+  color:black;
+}
+#Shop p i{
+  padding-top: 20px;
+  color:black;
+}
+button { 
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #0056b3;
+} */
+
+/* Shop end */
+
+/* Copy Right */
+/* footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+} */
+

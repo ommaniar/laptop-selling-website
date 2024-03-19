@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laptop Selling Website</title>
+  <!-- css -->
+  <link rel="stylesheet" href="style.css">
+  <!-- css -->
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- Bootstrap5 -->
+  <!-- Bootstrap 5 script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <!-- icon-link-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+    rel="stylesheet">
+  <!-- font end -->
+</head>
+
+<body>
+  <!-- navigation -->
+  <header>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+      <div class="container-fluid ">
+        <div class="navbar-brand"><a href="index.html" class="navbar-brand"><img src="res/logo-laptop.png"
+              class="navbar-brand-img"></a></div>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#link1">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="link1">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="#Home" class="nav-link active disabled">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="contact-us.html" class="nav-link">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a href="shop.html" class="nav-link">Shop</a>
+            </li>
+            <li class="nav-item">
+              <!-- give collapse effect for showing cart -->
+              <a href="cart.html" class="nav-link"><i class="bi bi-cart">Cart</i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- navigation end -->
+
+  <!-- carousal -->
+  <section class="container">
+    <div id="laptops" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#laptops" data-bs-slide-to="0" class="active" aria-current="true"
+          aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#laptops" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#laptops" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active h-50">
+          <img src="res/laptop-1-carousel.png" class="img-fluid w-100" alt="">
+        </div>
+        <div class="carousel-item">
+          <img src="res/laptop-3-carousel.png" class="img-fluid w-100" alt="">
+        </div>
+        <div class="carousel-item">
+          <img src="res/laptop-5-carousel.png" class="img-fluid w-100" alt="">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#laptops" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#laptops" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- carousal end -->
+
+  <section id="Shop" class="my-4">
+    <div class="container">
+      <h1 class="heading4 text-center fw-bold">Shop</h1>
+    </div>
+    <div class="container" id="container3">
+      <div class="row">
+        <div class="col-md-3 col-sm-6 my-2">
+          <div class="card h-100">
+            <img src="res/laptop-1.png" class="card-img-top" alt="thin-and-light-laptop-image">
+            <div class="card-body">
+              <h5 class="card-title">Thin And Light Laptop</h5>
+              <p class="card-text"><del>&#8377;50000</del> &#8377;46700</p>
+              <button class="btn btn-primary" onclick="showDetails('thin-and-light-laptop')">Show Details</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 my-2">
+          <div class="card h-100">
+            <img src="res/laptop-5.png" class="card-img-top" alt="thin-and-light-laptop-image">
+            <div class="card-body">
+              <h5 class="card-title">Gaming Laptop</h5>
+              <p class="card-text"><del>&#8377;100000</del> &#8377;99000</p>
+              <button class="btn btn-primary" onclick="showDetails('gaming-laptop')">Show Details</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 my-2">
+          <div class="card h-100">
+            <img src="res/laptop-3.png" class="card-img-top" alt="thin-and-light-laptop-image">
+            <div class="card-body">
+              <h5 class="card-title">Dual Screen Creative Laptop</h5>
+              <p class="card-text"><del>&#8377;150000</del> &#8377;149000</p>
+              <button class="btn btn-primary" onclick="showDetails('dual-screen-laptop')">Show Details</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 my-2">
+          <div class="card h-100">
+            <img src="res/laptop-6.png" class="card-img-top" alt="thin-and-light-laptop-image">
+            <div class="card-body">
+              <h5 class="card-title">RGB Gaming Laptop</h5>
+              <p class="card-text"><del>&#8377;140000</del> &#8377;125000</p>
+              <button class="btn btn-primary" onclick="showDetails('RGB-gaming-laptop')">Show Details</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Product Part End -->
+
+  <!-- Services -->
+  <section id="services">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-6">
+          <h5><i class="bi bi-tools"></i> Maintenance and Repair Service</h5>
+          <p>Easily Contct Us for Repair and Maintenance.</p>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <h5><i class="bi bi-truck"></i> Free Delivery</h5>
+          <p>100% free delivery.</p>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <h5><i class="bi bi-credit-card"></i>Safe and Secure Payments </h5>
+          <p>Secure encryption for all transaction.</p>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <h5><i class="bi bi-headset"></i>Available Customer Support</h5>
+          <p>Customer Support is available all the time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center mt-3 py-3">
+    <h6>&copy; 2024 Laptop Shop</h6>
+    <p>This website is made for project purpose</p>
+  </footer>
+  <script>
+    function showDetails(productID){
+            window.location.href = `product.html?id=${productID}`
+        }
+  </script>
+</body>
+
+</html>
