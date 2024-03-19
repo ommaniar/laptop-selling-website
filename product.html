@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- This file is just for backup -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,17 +38,17 @@
                 <div class="collapse navbar-collapse justify-content-end" id="link1">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a href="index.html" class="nav-link active disabled">Home</a>
+                            <a href="index.html" class="nav-link">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a href="contact-us.html" class="nav-link">Contact Us</a>
+                            <a href="#contact-us" class="nav-link">Contact Us</a>
                         </li>
                         <li class="nav-item">
                             <a href="shop.html" class="nav-link">Shop</a>
                         </li>
                         <li class="nav-item">
                             <!-- give collapse effect for showing cart -->
-                            <a href="cart.html" class="nav-link"><i class="bi bi-cart">Cart</i></a>
+                            <a href="#cart" class="nav-link"><i class="bi bi-cart">Cart</i></a>
                         </li>
                     </ul>
                 </div>
@@ -63,10 +63,10 @@
                 <div id="carouselExample" class="carousel slide">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="res/laptop-1.png" class="d-block w-100" alt="..." id="">
+                            <img src="" class="d-block w-100" alt="..." id="main_image">
                         </div>
                         <div class="carousel-item">
-                            <img src="res/laptop-1-2.png" class="d-block w-100" alt="...">
+                            <img src="" class="d-block w-100" alt="..." id="second_image">
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
@@ -86,7 +86,7 @@
                         <button class="btn btn-primary my-3"><i class="bi bi-cart"></i> Add To Cart</button>
                     </div>
                     <div class="col-md-6 text-center">
-                        <a  href="checkout-updated.html" class="btn btn-primary my-3"><i class="bi bi-bag"></i> Buy Now</a>
+                        <a href="checkout-updated.html" class="btn btn-primary my-3"><i class="bi bi-bag"></i> Buy Now</a>
 
                     </div>
                 </div>
@@ -95,11 +95,12 @@
             <!-- laptop information -->
             <div class="col-md-8">
                 <div class="container p-3">
-                    <h1>Thin And Light Laptop</h1>
-                    <p>Intel i3-1215U/8GB/512GB SSD/Intel UHD Graphics/14.0'' FHD/Windows 11/Thin & Light 1.35kg</p>
+                    <h1 id="model"></h1>
+                    <p id="description"></p>
                     <hr>
-                    <h1><sup>&#8377;</sup>46700</h1>
-                    <h6 class="text-secondary">M.R.P. <sup>&#8377;</sup><del>50000</del></h6>
+                    <h1><sup>&#8377;</sup><span id="price"></span> </h1>
+                    <h6 class="text-secondary">M.R.P. <sup >&#8377;</sup><del><span id="mrp"></span></del>
+                    </h6>
                     <p>Inclusive of all taxes</p>
                     <section id="services">
                         <div class="container">
@@ -131,19 +132,19 @@
             <table class="table table-striped table-hover">
                 <tr>
                     <th>Model</th>
-                    <td>Thin And Light Laptop</td>
+                    <td id="td_model"></td>
                 </tr>
                 <tr>
                     <th>Color</th>
-                    <td>Grey</td>
+                    <td id="color"></td>
                 </tr>
                 <tr>
                     <th>Brand</th>
-                    <td>XYZ</td>
+                    <td id="brand"></td>
                 </tr>
                 <tr>
                     <th>Screen Size and Type</th>
-                    <td>14 inch IPS Display</td>
+                    <td id="screen"></td>
                 </tr>
             </table>
             <hr>
@@ -151,27 +152,27 @@
             <table class="table table-striped table-hover">
                 <tr>
                     <th>Processor</th>
-                    <td>Intel Core i3 1215U, 12th Gen</td>
+                    <td id="processor"></td>
                 </tr>
                 <tr>
                     <th>SSD</th>
-                    <td>512 GB</td>
+                    <td id="SSD"></td>
                 </tr>
                 <tr>
                     <th>RAM</th>
-                    <td>16 GB</td>
+                    <td id="RAM"></td>
                 </tr>
                 <tr>
                     <th>RAM Type</th>
-                    <td>DDR4</td>
+                    <td id="RAMType"></td>
                 </tr>
                 <tr>
                     <th>Clock Speed</th>
-                    <td>0.9 GHz upto max turbo frequency at 4.4 Ghz</td>
+                    <td id="clock_speed"></td>
                 </tr>
                 <tr>
                     <th>Graphics Card</th>
-                    <td>Intel Integrated UHD</td>
+                    <td id="gpu"></td>
                 </tr>
             </table>
             <hr>
@@ -179,19 +180,19 @@
             <table class="table table-striped table-hover">
                 <tr>
                     <th>Disk Drive</th>
-                    <td>Not Available</td>
+                    <td id="disk_drive"></td>
                 </tr>
                 <tr>
                     <th>Web Camera</th>
-                    <td>Yes</td>
+                    <td id="cam"></td>
                 </tr>
                 <tr>
                     <th>Finger Print Sensor</th>
-                    <td>No</td>
+                    <td id="fingerprint"></td>
                 </tr>
                 <tr>
                     <th>Keyboard</th>
-                    <td>Standard Full Size Keyboard</td>
+                    <td id="keyboard"></td>
                 </tr>
             </table>
         </div>
@@ -250,33 +251,35 @@
             </div>
         </div>
         <div class="text-center">
-            <h3 class="p-3">Have More Questions <button class="btn btn-secodnary" data-bs-toggle="modal" data-bs-target="#question-modal">Click Here</button> to ask them?</h3>
-        </div> 
+            <h3 class="p-3">Have More Questions <button class="btn btn-secodnary" data-bs-toggle="modal"
+                    data-bs-target="#question-modal">Click Here</button> to ask them?</h3>
+        </div>
         <div class="modal" tabindex="-1" id="question-modal">
             <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title">Enter Question.</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Enter Question.</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="Email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="Email" name="Email"
+                                placeholder="name@example.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Question</label>
+                            <textarea class="form-control" id="Question" name="Question" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Submit</button>
+                    </div>
                 </div>
-                <div class="modal-body">
-                    <div class="mb-3">
-                        <label for="Email" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="Email" name="Email" placeholder="name@example.com">
-                      </div>
-                      <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">Question</label>
-                        <textarea class="form-control" id="Question" name="Question" rows="3"></textarea>
-                      </div>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Submit</button>
-                </div>
-              </div>
             </div>
-          </div>
-          
+        </div>
+
     </section>
 
     <!-- footer -->
@@ -284,6 +287,49 @@
         <h6>&copy; 2024 Laptop Shop</h6>
         <p>This website is made for project purpose</p>
     </footer>
+
+    <!-- script for fetching and putting data -->
+    <script>
+        const queryParams = new URLSearchParams(window.location.search);
+        const productId = queryParams.get('id');
+
+        fetch(`products.json`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                const product = data.find(item => item.id === productId);
+                if (product) {
+                    document.getElementById('main_image').src = product.main_image
+                    document.getElementById('second_image').src = product.second_image
+                    document.getElementById("description").innerHTML = `${product.description}`;
+                    document.getElementById('price').innerHTML = `${product.price}`
+                    document.getElementById("mrp").innerHTML = `${product.mrp}`
+                    document.getElementById("model").innerHTML = `${product.model}`
+                    document.getElementById("td_model").innerHTML = `${product.model}`
+                    document.getElementById("color").innerHTML = product.color
+                    document.getElementById("brand").innerHTML = product.brand
+                    document.getElementById("screen").innerHTML = product.screen
+                    document.getElementById("processor").innerHTML = product.processor
+                    document.getElementById("SSD").innerHTML = product.SSD
+                    document.getElementById("RAM").innerHTML = product.RAM
+                    document.getElementById("RAMType").innerHTML = product.RAMType
+                    document.getElementById("clock_speed").innerHTML = product.clock_speed
+                    document.getElementById("gpu").innerHTML = product.gpu
+                    document.getElementById("disk_drive").innerHTML = product.disk_drive
+                    document.getElementById("cam").innerHTML = product.cam
+                    document.getElementById("fingerprint").innerHTML = product.fingerprint
+                    document.getElementById("keyboard").innerHTML = product.keyboard
+                } else {
+                    document.getElementById('model').innerHTML = `Product not found.`;
+                }
+            })
+            .catch(error => console.error('Error fetching product details:', error));
+
+    </script>
 </body>
 
 </html>
