@@ -1,10 +1,15 @@
 *{
-    font-family: "Nunito" !important;
-}
-option{
   font-family: "Nunito" !important;
-
 }
+
+.carousel {
+  height: 60vh;
+}
+
+.carousel-item img {
+    height: 60vh;
+}
+
 .navbar-brand-img{
   height: 50px;
 }
@@ -14,9 +19,7 @@ option{
   width: 100%;
 }
 .heading4{
-  color:black;
   border-bottom: 2px solid #b2744c;
-
 }
 
 /* transition in card */
@@ -36,6 +39,9 @@ box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
 .opacity-50{
   background-color: rgba(108, 117, 125,0.5) !important;
 }
+
+/* product */
+
 /* #container3{
   margin-top: 25px;
 }

@@ -31,7 +31,7 @@
         <nav class="navbar navbar-expand-md bg-dark navbar-dark">
             <div class="container-fluid ">
                 <div class="navbar-brand"><a href="index.html" class="navbar-brand"><img src="res/logo-laptop.png"
-                            class="navbar-brand-img"></a></div>
+                            class="navbar-brand-img rounded"> LAPTOP COMPANY</a></div>
                 <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#link1">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -59,60 +59,103 @@
     <section id="order" class="container-fluid">
         <div class="container">
             <h3 class="text-center p-2">Enter Order Details</h3>
-            <form method="get">
+            <form method="get" class="was-validated">
                 <div class="row">
                     <div class="col-md-6 mb-2">
                         <label for="email" class="form-label">Email:</label>
-                        <input type="email" name="email" id="email" placeholder="Enter Email" class="form-control">
+                        <input type="email" name="email" id="email" placeholder="Enter Email" class="form-control"
+                            required>
+                        <div class="invalid-feedback">Enter Your Email</div>
                     </div>
 
                     <div class="col-md-6 mb-2"><label for="name" class="form-label">Name:</label>
-                        <input type="text" name="name" id="name" placeholder="Enter Name" class="form-control">
+                        <input type="text" name="name" id="name" placeholder="Enter Name" class="form-control" required>
+                        <div class="invalid-feedback">Enter Your Name</div>
+
                     </div>
                     <div class="col-md-12 "><label for="shipAddress" class="form-label">Shipping Address:</label></div>
-                    <textarea name="shipAddress" id="shipAddress" rows="5" class="form-control mb-2"></textarea>
+                    <div class="col-md-12"> <textarea name="shipAddress" id="shipAddress" rows="5"
+                            class="form-control mb-2" required></textarea>
+                        <div class="invalid-feedback">Enter Your Address</div>
+                    </div>
+
 
                     <div class="col-md-12 my-2"><label for="BillAddress" class="form-label">Billing Address:</label>
                     </div>
-                    <textarea name="BillAddress" id="BillAddress" rows="5" class="form-control mb-2"></textarea>
+                    <div class="col-md-12">
+                    <textarea name="BillAddress" id="BillAddress" rows="5" class="form-control mb-2"
+                        required></textarea>
+                        <div class="invalid-feedback">Please Enter Your Billing Address</div>
+
+                    </div>
+
                     <div class="col-md-12 mt-2">
                         <label for="payment">Payment Method:</label>
-                        <select class="form-select" id="payment" name="payment">
-                            <option selected disbaled hidden>Select  Payment Method</option>
-                            <option value="cc" >Credit Card</option>
+                        <select class="form-select" id="payment" name="payment" required>
+                            <option selected disbaled hidden value="">Select Payment Method</option>
+                            <option value="cc">Credit Card</option>
                             <option value="debit">Dedit Card</option>
                             <option value="paypal">PayPal</option>
                             <option value="upi">UPI</option>
                             <option value="cash">Cash On Delivery</option>
                         </select>
+                        <div class="invalid-feedback">Please Choose Valid Payment Method</div>
                     </div>
 
                     <div class="col-md-6 mt-3">
                         <label for="Phone" class="form-label">Phone Number:</label>
-                        <input type="tel" name="Phone" id="Phone" placeholder="Enter Phone Number" class="form-control">
+                        <input type="tel" name="Phone" id="Phone" placeholder="Enter Phone Number" class="form-control"
+                            required>
+                            <div class="invalid-feedback">Please Enter Phone Number</div>
                     </div>
 
                     <div class="col-md-6 mt-3">
                         <label for="Zip Code" class="form-label">Zip Code:</label>
-                        <input type="text" name="Zip" id="Zip" placeholder="Enter Zip Code" class="form-control">
+                        <input type="text" name="Zip" id="Zip" placeholder="Enter Zip Code" class="form-control"
+                            required>
+                        <div class="invalid-feedback">Please Enter Valid Zip Code</div>
                     </div>
 
                     <div class="col-md-12 my-2">
                         <input type="checkbox" name="agree" id="agree">
-                        <label for="agree" class="form-label">I agree to the Terms and Conditions</label>
+                        <label for="agree" class="form-label" required>I agree to the Terms and Conditions</label>
+                        <div class="invalid-feedback">Please Mark the Check box</div>
                     </div>
                 </div>
                 <input type="submit" value="Submit" class="btn btn-primary my-2 py-1" onclick="placeOrder()">
-               <input type="reset" value="Clear" class="btn btn-danger my-2 py-1">
+                <input type="reset" value="Clear" class="btn btn-danger my-2 py-1">
             </form>
         </div>
     </section>
-    <footer class="bg-dark text-white text-center mt-3 py-3">
+    <footer class="bg-dark text-white text-center mt-0 py-3">
+        <div class="bg-dark text-light">
+
+            <h3 class="text-center pt-3">Follow Us</h3>
+            <div class="my-1">
+                <a href="#" class="btn text-secondary fs-2"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="btn text-secondary fs-2"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="btn text-secondary fs-2"><i class="bi bi-twitter"></i></i></a>
+                <a href="#" class="btn text-secondary fs-2"><i class="bi bi-linkedin"></i></a>
+                <a href="#" class="btn text-secondary fs-2"><i class="bi bi-youtube"></i></a>
+
+            </div>
+        </div>
+
         <h6>&copy; 2024 Laptop Shop</h6>
         <p>This website is made for project purpose</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-start">
+                    <p>Email: abc@company.com</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <p>Phone: 0987654321</p>
+                </div>
+            </div>
+        </div>
     </footer>
     <script>
-        function placeOrder(){
+        function placeOrder() {
             alert("Order Placed Successfully");
         }
     </script>
