@@ -59,7 +59,7 @@
     <section id="order" class="container-fluid">
         <div class="container">
             <h3 class="text-center p-2">Enter Order Details</h3>
-            <form method="get" class="was-validated">
+            <form class="was-validated" id="order-form">
                 <div class="row">
                     <div class="col-md-6 mb-2">
                         <label for="email" class="form-label">Email:</label>
@@ -83,8 +83,8 @@
                     <div class="col-md-12 my-2"><label for="BillAddress" class="form-label">Billing Address:</label>
                     </div>
                     <div class="col-md-12">
-                    <textarea name="BillAddress" id="BillAddress" rows="5" class="form-control mb-2"
-                        required></textarea>
+                        <textarea name="BillAddress" id="BillAddress" rows="5" class="form-control mb-2"
+                            required></textarea>
                         <div class="invalid-feedback">Please Enter Your Billing Address</div>
 
                     </div>
@@ -106,7 +106,7 @@
                         <label for="Phone" class="form-label">Phone Number:</label>
                         <input type="tel" name="Phone" id="Phone" placeholder="Enter Phone Number" class="form-control"
                             required>
-                            <div class="invalid-feedback">Please Enter Phone Number</div>
+                        <div class="invalid-feedback">Please Enter Phone Number</div>
                     </div>
 
                     <div class="col-md-6 mt-3">
@@ -122,7 +122,7 @@
                         <div class="invalid-feedback">Please Mark the Check box</div>
                     </div>
                 </div>
-                <input type="submit" value="Submit" class="btn btn-primary my-2 py-1" onclick="placeOrder()">
+                <input type="submit" value="Submit" class="btn btn-primary my-2 py-1" onclick="placeOrder(this)">
                 <input type="reset" value="Clear" class="btn btn-danger my-2 py-1">
             </form>
         </div>
@@ -145,18 +145,25 @@
         <p>This website is made for project purpose</p>
         <div class="container">
             <div class="row">
-                <div class="col-md-6 text-start">
+                <div class="col-md-6">
                     <p>Email: abc@company.com</p>
                 </div>
-                <div class="col-md-6 text-end">
+                <div class="col-md-6">
                     <p>Phone: 0987654321</p>
                 </div>
             </div>
         </div>
     </footer>
     <script>
-        function placeOrder() {
-            alert("Order Placed Successfully");
+        function placeOrder(id) {
+            // alert("Order Placed Successfully");
+            var formIsValid = document.getElementById("order-form").checkValidity();
+            console.log(formIsValid)
+            if(formIsValid){
+                alert('Order Placed');
+            }else{
+                
+            }
         }
     </script>
 </body>
