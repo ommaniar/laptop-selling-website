@@ -9,13 +9,12 @@
     <link rel="stylesheet" href="style.css">
     <!-- css -->
     <!-- Bootstrap 5 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <!-- Bootstrap5 -->
-    <!-- Bootstrap 5 script -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+ <!-- Bootstrap 5 -->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+ <!-- Bootstrap5 -->
+ <!-- Bootstrap 5 script -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+ 
     <!-- icon-link-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- font -->
@@ -66,7 +65,9 @@
     <section id="main" class="container-fluid">
         <div class="row">
             <div class="col-md-3 mt-3">
+            <!-- Accordian for filter -->
                 <div class="accordion" id="accordian-filter">
+                    <!-- budget -->
                     <div class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse"
@@ -100,6 +101,7 @@
                         </div>
                     </div>
                     <div class="accordion-item">
+                        <!-- processor -->
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#processor-accordian" aria-expanded="false" aria-controls="collapseTwo">
@@ -142,6 +144,7 @@
                         </div>
                     </div>
                     <div class="accordion-item">
+                        <!-- category -->
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#category-accordian" aria-expanded="false"
@@ -186,11 +189,11 @@
                 </div>
             </div>
             <div class="col-md-9">
+                <!-- shop items -->
                 <div class="container" id="container3">
                     <div class="row">
                         <p id="searchText" class="col-12 mt-3"></p>
 
-                        <!-- row-1 -->
                         <div class="col-md-3 col-sm-6 my-2 card-wrapper" data-search-keyword="Thin and Light Laptop">
                             <div class="card h-100">
                                 <img src="res/laptop-1.png" class="card-img-top" alt="thin-and-light-laptop-image">
@@ -312,25 +315,7 @@
 
     <!-- script tags -->
     <script type="text/javascript" lang="js">
-        // function search() {
-        //     // Declare variables
-        //     var input = document.getElementById("searchInput").value;
-        //     var content = document.getElementsByClassName('card-title');
-        //     var card = document.getElementsByClassName('card');
-        //     console.log(content.length)
-        //     // Loop through all list items, and hide those who don't match the search query
-        //     for (i = 0; i < content.length; i++) {
-        //         txtValue = content[i].textContent || content[i].innerText;
-        //         if (txtValue.toLowerCase().indexOf(input) > -1) {
-        //             // card[i].classList.remove("d-none");
-        //             card[i].style.visibility = "visible";
-        //             console.log("True")
-        //         } else {
-        //             // card[i].classList.add("d-none");
-        //             card[i].style.visibility = "hidden";
-        //         }
-        //     }
-        // }
+
         // Function to handle search
         function search() {
             var searchInput = document.getElementById('searchInput');
@@ -351,10 +336,11 @@
                 }
             });
         }
-        // function for redirecting details
+        // function for redirecting page
         function showDetails(productID){
             window.location.href = `product.html?id=${productID}`
         }
+        // this function used for search when enter is pressed
         function triggerSearch(){
             if (event.key === "Enter"){
                 search()

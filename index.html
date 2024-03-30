@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!-- 
+ Title: Laptop Selling Website
+ Date:
+ Subject: FSD-1
+ Prepared By:
+ Maniar Om
+ Prajapati Aakash
+ Kadia Mahir
+ -->
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,7 +30,7 @@
     rel="stylesheet">
 </head>
 
-<body  class="bg-light">
+<body  class="bg-main">
   <!-- navigation -->
   <header>
     <nav class="navbar navbar-expand-md bg-dark navbar-dark">
@@ -85,8 +93,7 @@
     </div>
   </section>
 
-  <!-- carousal end -->
-
+  <!-- Offers -->
   <section id="Shop" class="my-4">
     <div class="container">
       <h1 class="heading4 text-center fw-bold">Exciting Offers</h1>
@@ -99,7 +106,6 @@
             <div class="card-body">
               <h5 class="card-title border-bottom">Thin And Light Laptop</h5>
               <p class="card-text"><span class="fs-4">&#8377;46700 </span><del class="text-danger">M.R.P. &#8377;50000</del><br><span class="text-danger fw-bold">Limited Time Deal</span> </p>
-              <!-- <p class="cartd-text text-danger fw-bold text-center rounded">Limited Deal</p> -->
               <button class="btn btn-primary w-100" onclick="showDetails('thin-and-light-laptop')">Show Details</button>
             </div>
           </div>
@@ -137,7 +143,6 @@
       </div>
     </div>
   </section>
-  <!-- Product Part End -->
 
   <!-- Services -->
   <section id="services" class="container-fluid text-light bg-secondary py-3">
@@ -194,6 +199,7 @@
   </div>
 </footer>
   <script>
+    // script for redirecting to product.html
     function showDetails(productID){
             window.location.href = `product.html?id=${productID}`
         }

@@ -9,13 +9,12 @@
     <link rel="stylesheet" href="style.css">
     <!-- css -->
     <!-- Bootstrap 5 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <!-- Bootstrap5 -->
-    <!-- Bootstrap 5 script -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- Bootstrap5 -->
+  <!-- Bootstrap 5 script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  
     <!-- icon-link-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- font -->
@@ -58,7 +57,7 @@
     <!-- product -->
     <section id="product" class="container-fluid py-2">
         <div class="row">
-            <!-- laptop image -->
+            <!-- laptop image carousel -->
             <div class="col-md-4">
                 <div class="sticky-md-top py-4">
                     <div id="carouselExample" class="carousel slide">
@@ -97,11 +96,12 @@
             <!-- laptop information -->
             <div class="col-md-8">
                 <div class="container-fluid py-3">
+                    <!-- basic information -->
                     <h1 id="model"></h1>
                     <p id="description"></p>
                     <hr>
                     <h1><sup>&#8377;</sup><span id="price"></span> </h1>
-                    <h6 class="text-secondary">M.R.P. <sup>&#8377;</sup><del><span id="mrp"></span></del>
+                    <h6 class="text-secondary ">M.R.P. <span class="text-danger"><sup>&#8377;</sup><del><span id="mrp"></span></span></del>
                     </h6>
                     <p>Inclusive of all taxes</p>
                     <section id="services">
@@ -242,10 +242,12 @@
                             </div>
                         </div>
                     </div>
+                    <!-- ask question section -->
                     <div class="text-center">
                         <h3 class="p-3">Have More Questions <button class="btn btn-secodnary" data-bs-toggle="modal"
                                 data-bs-target="#question-modal">Click Here</button> to ask them?</h3>
                     </div>
+                    <!-- question modal -->
                     <div class="modal" tabindex="-1" id="question-modal">
                         <div class="modal-dialog">
                             <div class="modal-content">

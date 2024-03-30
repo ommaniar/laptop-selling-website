@@ -13,7 +13,10 @@
 .navbar-brand-img{
   height: 50px;
 }
-
+/* .bg-main{
+  background-color: rgb(238, 238, 238);
+  /* background-color: rgb(231, 235, 235);
+} */
 /* Shop st */
 #Shop{
   width: 100%;
@@ -39,7 +42,16 @@ box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
 .opacity-50{
   background-color: rgba(108, 117, 125,0.5) !important;
 }
-
+@media (max-width: 767.98px) {
+ 
+  .carousel{
+      height: auto;
+  }
+  .carousel img{
+      height: auto;
+  }
+ 
+}
 
 /* product */
 
