@@ -104,7 +104,7 @@
                     <h6 class="text-secondary ">M.R.P. <span class="text-danger"><sup>&#8377;</sup><del><span id="mrp"></span></span></del>
                     </h6>
                     <p>Inclusive of all taxes</p>
-                    <section id="services">
+                    <section id="services" class="bg-secondary text-white p-3 rounded-3 bg-opacity-75">
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-md-3 col-sm-6">
@@ -270,7 +270,7 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Submit</button>
+                                    <button type="button" class="btn btn-primary" onclick="hideModal()">Submit</button>
                                 </div>
                             </div>
                         </div>
@@ -312,21 +312,30 @@
         </div>
       </footer>
 
-    <!-- script for fetching and putting data -->
+    <!-- script for fetching and putting data (out of scope used for fetching data only)-->
     <script>
+        // fetching url
         const queryParams = new URLSearchParams(window.location.search);
+        // fetching id value
         const productId = queryParams.get('id');
-
+        // fetching data from json file
         fetch(`products.json`)
             .then(response => {
+                // response check
                 if (!response.ok) {
+                    // if response not ok then throws errors
                     throw new Error('Network response was not ok');
                 }
+                // returning response
                 return response.json();
             })
             .then(data => {
+                // fetching each data
+                // first getting the object based on its id
+                // find method of data array, returns the value which fullfills the condition item.id === productId
                 const product = data.find(item => item.id === productId);
                 if (product) {
+                    // putting values in html tags
                     document.getElementById('main_image').src = product.main_image
                     document.getElementById('second_image').src = product.second_image
                     document.getElementById("description").innerHTML = `${product.description}`;
@@ -348,11 +357,20 @@
                     document.getElementById("fingerprint").innerHTML = product.fingerprint
                     document.getElementById("keyboard").innerHTML = product.keyboard
                 } else {
+                    // if no id matched
                     document.getElementById('model').innerHTML = `Product not found.`;
                 }
             })
             .catch(error => console.error('Error fetching product details:', error));
 
+    </script>
+    <script>
+        function hideModal(){
+            var modal = document.getElementById('question-modal')
+            var modalInstance = bootstrap.Modal.getInstance(modal);
+            modalInstance.hide();
+            alert("question asked")
+        }
     </script>
 </body>
 
