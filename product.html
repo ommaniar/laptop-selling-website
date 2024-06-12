@@ -8,10 +8,13 @@
     <!-- css -->
     <link rel="stylesheet" href="style.css">
     <!-- css -->
-  <!-- Bootstrap 5 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
     <!-- icon-link-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="icon" type="image/x-icon" href="res/logo-laptop.png">
@@ -29,8 +32,8 @@
         <nav class="navbar navbar-expand-md bg-dark navbar-dark">
             <div class="container-fluid ">
                 <div class="navbar-brand"><a href="index.html" class="navbar-brand"><img src="res/logo-laptop.png"
-                    class="navbar-brand-img rounded"> LAPTOP COMPANY</a></div>
-              <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#link1">
+                            class="navbar-brand-img rounded"> LAPTOP COMPANY</a></div>
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#link1">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="link1">
@@ -100,7 +103,8 @@
                     <p id="description"></p>
                     <hr>
                     <h1><sup>&#8377;</sup><span id="price"></span> </h1>
-                    <h6 class="text-secondary ">M.R.P. <span class="text-danger"><sup>&#8377;</sup><del><span id="mrp"></span></span></del>
+                    <h6 class="text-secondary ">M.R.P. <span class="text-danger"><sup>&#8377;</sup><del><span
+                                    id="mrp"></span></span></del>
                     </h6>
                     <p>Inclusive of all taxes</p>
                     <section id="services" class="bg-secondary text-white p-3 rounded-3 bg-opacity-75">
@@ -257,19 +261,21 @@
                                 </div>
                                 <div class="modal-body">
                                     <div class="mb-3">
+                                    <form id="question-form">
                                         <label for="Email" class="form-label">Email address</label>
                                         <input type="email" class="form-control" id="Email" name="Email"
                                             placeholder="name@example.com" required>
                                     </div>
                                     <div class="mb-3">
                                         <label for="exampleFormControlTextarea1" class="form-label">Question</label>
-                                        <textarea class="form-control" id="Question" name="Question"
-                                            rows="3" required></textarea>
+                                        <textarea class="form-control" id="Question" name="Question" rows="3"
+                                            required></textarea>
                                     </div>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
                                     <button type="button" class="btn btn-primary" onclick="hideModal()">Submit</button>
+                                </form>
                                 </div>
                             </div>
                         </div>
@@ -285,31 +291,31 @@
     <!-- footer -->
     <footer class="bg-dark text-white text-center mt-0 py-3">
         <div class="bg-dark text-light">
-        
-          <h3 class="text-center pt-3">Follow Us</h3>
-          <div class="my-1">
-            <a href="#" class="btn text-secondary fs-2"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="btn text-secondary fs-2"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="btn text-secondary fs-2"><i class="bi bi-twitter"></i></i></a>
-            <a href="#" class="btn text-secondary fs-2"><i class="bi bi-linkedin"></i></a>
-            <a href="#" class="btn text-secondary fs-2"><i class="bi bi-youtube"></i></a>
-            
-          </div>
+
+            <h3 class="text-center pt-3">Follow Us</h3>
+            <div class="my-1">
+                <a href="#" class="btn text-secondary fs-2"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="btn text-secondary fs-2"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="btn text-secondary fs-2"><i class="bi bi-twitter"></i></i></a>
+                <a href="#" class="btn text-secondary fs-2"><i class="bi bi-linkedin"></i></a>
+                <a href="#" class="btn text-secondary fs-2"><i class="bi bi-youtube"></i></a>
+
+            </div>
         </div>
-        
+
         <h6>&copy; 2024 Laptop Shop</h6>
         <p>This website is made for project purpose</p>
         <div class="container">
-          <div class="row">
-            <div class="col-md-6 ">
-              <p>Email: abc@company.com</p>
+            <div class="row">
+                <div class="col-md-6 ">
+                    <p>Email: abc@company.com</p>
+                </div>
+                <div class="col-md-6 ">
+                    <p>Phone: 0987654321</p>
+                </div>
             </div>
-            <div class="col-md-6 ">
-              <p>Phone: 0987654321</p>
-            </div>
-          </div>
         </div>
-      </footer>
+    </footer>
 
     <!-- script for fetching and putting data (out of scope used for fetching data only)-->
     <script>
@@ -364,11 +370,17 @@
 
     </script>
     <script>
-        function hideModal(){
-            var modal = document.getElementById('question-modal')
-            var modalInstance = bootstrap.Modal.getInstance(modal);
-            modalInstance.hide();
-            alert("question asked")
+        function hideModal() {
+            var formIsValid = document.getElementById("question-form").checkValidity();
+            if (formIsValid) {
+                var modal = document.getElementById('question-modal')
+                var modalInstance = bootstrap.Modal.getInstance(modal);
+                modalInstance.hide();
+                alert("question asked")
+
+            }
+
+
         }
     </script>
 </body>

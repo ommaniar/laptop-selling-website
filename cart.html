@@ -202,19 +202,24 @@
     <script>
         // to remove the row
         function removeRow(id) {
+            // creaete object of row
             row = document.getElementById(id)
+            // remove row
             row.remove();
         }
+        // get the value inside the coupon and show it in the button
         function addCoupon() {
-            // get the value inside the coupon and show it in the button
+            // get button object
             var component = document.getElementById('coupon')
+            // change value to entered input of coupon-code
             component.innerHTML = document.getElementById('coupon-code').value;
+            // hiding the modal
             var modal = document.getElementById('coupon-modal')
             var modalInstance = bootstrap.Modal.getInstance(modal);
             modalInstance.hide();
-            var id = document.getElementById('coupon');
-            id.classList.remove("btn-secondary");
-            id.classList.add("text-secondary")
+            // changing style of coupon
+            component.classList.remove("btn-secondary");
+            component.classList.add("text-secondary")
         }
     </script>
 </body>

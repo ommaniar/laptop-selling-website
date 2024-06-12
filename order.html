@@ -118,12 +118,12 @@
                     </div>
 
                     <div class="col-md-12 my-2">
-                        <input type="checkbox" name="agree" id="agree">
-                        <label for="agree" class="form-label" required>I agree to the Terms and Conditions</label>
+                        <input type="checkbox" name="agree" id="agree" required>
+                        <label for="agree" class="form-label">I agree to the Terms and Conditions</label>
                         <div class="invalid-feedback">Please Mark the Check box</div>
                     </div>
                 </div>
-                <input type="submit" value="Submit" class="btn btn-primary my-2 py-1" onclick="placeOrder(this)">
+                <input type="submit" value="Submit" class="btn btn-primary my-2 py-1" onclick="placeOrder()">
                 <input type="reset" value="Clear" class="btn btn-danger my-2 py-1">
             </form>
         </div>
@@ -157,10 +157,10 @@
         </div>
     </footer>
     <script>
-        // it will alert that order placed only when for is valid
-        function placeOrder(id) {
+        // it will alert that order placed only when form is valid
+        function placeOrder() {
+    
             var formIsValid = document.getElementById("order-form").checkValidity();
-            var email = document.getElementById("email").value
             if (formIsValid) {
                 alert('Order Placed');
                 window.location.href = `index.html`

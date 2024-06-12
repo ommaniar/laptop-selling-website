@@ -13,10 +13,7 @@
 .navbar-brand-img{
   height: 50px;
 }
-/* .bg-main{
-  background-color: rgb(238, 238, 238);
-  /* background-color: rgb(231, 235, 235);
-} */
+
 /* Shop st */
 #Shop{
   width: 100%;
@@ -27,7 +24,7 @@
 
 /* transition in card */
 .card{
-  transition: .3s ease,.3s box-shadow,.3s -webkit-transform ease;
+  transition: .3s ease,.3s box-shadow,.3s transform ease;
 
 }
 /* hover effect for card */
@@ -35,7 +32,8 @@
   transform: scale(1.05);
 box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
 }
-/* adding background */
+
+/* adding background image*/
 .bg-contact{
   background-image: url(res/laptop-3-carousel.png);
 }
@@ -53,49 +51,4 @@ box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
   }
  
 }
-
-/* product */
-
-/* #container3{
-  margin-top: 25px;
-}
-#Shop h3{
-  text-align: center;
-  color: black;
-  font-size: 25px;
-}
-#Shop p{
-  padding-top: 20px;
-  color:black;
-}
-#Shop p i{
-  padding-top: 20px;
-  color:black;
-}
-button { 
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 10px;
-}
-
-button:hover {
-  background-color: #0056b3;
-} */
-
-/* Shop end */
-
-/* Copy Right */
-/* footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 10px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-} */
 

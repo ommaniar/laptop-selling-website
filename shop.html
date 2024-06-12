@@ -318,24 +318,32 @@
 
         // Function to handle search
         function search() {
+            // get search input element
             var searchInput = document.getElementById('searchInput');
+            // get all the element which has card-wrapper class
             var cards = document.querySelectorAll('.card-wrapper');
+            // assigning search Input value in lower case in searchQuery
             var searchQuery = searchInput.value.toLowerCase();
+            // element for mentioning search text below nav
             var searchText = document.getElementById("searchText")
+
+            // if search query is not empty
             if(!searchQuery == ""){
                 searchText.innerHTML = `Search Result for ${searchQuery}`
-            }else{
+            }
+            // if search query is empty
+            else{
                 searchText.innerHTML = ""
             }
+            // removing cardss which don't include search text
             cards.forEach(function (card) {
                 var keywords = card.getAttribute('data-search-keyword').toLowerCase();
                 if (keywords.includes(searchQuery)) {
                     // card.style.display = 'flex !important';
-                    card.classList.remove('d-none'); // Hide the card
-                    console.log("True")
+                    card.classList.remove('d-none'); // display card which includes search text
                 } else {
                     // card.style.display = 'none !important';
-                    card.classList.add('d-none'); // Show the card
+                    card.classList.add('d-none'); // hide card which don't include search text
                 }
             });
         }
